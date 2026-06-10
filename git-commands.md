@@ -22,4 +22,9 @@
 
 ## Git Branching
 - `git checkout -b devops`: create new branch called `devops` and moved to `devops` branch.
+- `git branch`: Lists, creates, or deletes branches.
 
+
+## Remote repositories
+- `git push`: Push changes from local to remote directory on github. Only push changes to the current branch you are working in.
+- `git push origin main`: Can reference the branch to push changes.
