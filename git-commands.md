@@ -19,3 +19,7 @@
   _Example:_ `git diff git-commands.md`
 - `git log`: Displays the history of commits.
   _Example:_ `git log --oneline`
+
+## Git Branching
+- `git checkout -b devops`: create new branch called `devops` and moved to `devops` branch.
+
