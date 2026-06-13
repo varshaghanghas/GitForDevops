@@ -2,3 +2,4 @@ User Profiles
 Name field
 Name field fixed
 Bio field
+Bio field formatting
