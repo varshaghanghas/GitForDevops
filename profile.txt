@@ -3,3 +3,5 @@ Name field
 Name field fixed
 Bio field
 Bio field formatting
+Feature Draft One
+Fixing spelling
