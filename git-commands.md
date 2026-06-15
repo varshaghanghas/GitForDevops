@@ -5,6 +5,8 @@
   _Example:_ `git config --global user.name "Varsha Ghanghas"`
 - `git init`: Creates a new local Git repository.
   _Example:_ `git init`
+- `git config --global user.name "Name"` - Sets global commit name.
+- `git config --global user.email "email@example.com"` - Sets global commit 
 
 ## Basic Workflow
 - `git status`: Shows the state of the working directory and staging area.
@@ -13,6 +15,8 @@
   _Example:_ `git add git-commands.md`
 - `git commit`: Saves staged snapshots to the permanent history.
   _Example:_ `git commit -m "feat: initial commit"`
+- `git log --oneline` - Displays condensed chronological commit history.
+- `git diff` - Views unstaged file differences against the last commit.
 
 ## Viewing Changes
 - `git diff`: Shows differences between files in the working directory and the staging area.
@@ -24,6 +28,31 @@
 - `git checkout -b devops`: create new branch called `devops` and moved to `devops` branch. Can also use `git switch -c <name>`.
 - `git branch`: Lists, creates, or deletes branches.
 - `git switch branch_name`: switches to branch given.
+- `git branch -d <name>` - Deletes a fully merged local branch.
+
+## Merging & Rebasing
+- `git merge <branch>` - Joins specified branch history into active branch.
+- `git rebase <branch>` - Rewrites local commits on top of another branch tip.
+
+## Stash & Cherry Pick
+- `git stash` - Saves modified tracking files onto a temporary stack.
+- `git stash pop` - Restores and deletes the latest stashed set of files.
+- `git cherry-pick <commit-hash>` - Applies changes from an isolated commit.
+
+## Reset & Revert
+- `git reset --soft HEAD~1` - Undoes commit; leaves files staged.
+- `git reset --mixed HEAD~1` - Undoes commit; leaves files unstaged.
+- `git reset --hard HEAD~1` - Undoes commit; wipes all local changes completely.
+- `git revert <commit-hash>` - Creates a new forward-facing undo commit safely.
+
+
+## The Safety Net: git reflog
+If you accidentally run `git reset --hard` and wipe out your work, the commits are not instantly gone. Git keeps a hidden log of your historical HEAD movements for up to 90 days.
+
+- **View Reflog:** `git reflog`
+- **How to rescue a lost commit:** 
+1. Find the commit hash or the pointer reference (e.g., `HEAD@{2}`) from before your destructive reset.
+2. Run `git reset --hard HEAD@{2}` to completely restore your working tree to that exact moment in time.
 
 ## Remote repositories
 - `git push`: Push changes from local to remote directory on github. Only push changes to the current branch you are working in.
